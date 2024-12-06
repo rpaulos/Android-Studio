@@ -1,1 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Rae S. Paulos"
+
+        android:textSize="20"
+        android:textStyle="bold"
+        app:layout_editor_absoluteX="50dp"
+        app:layout_editor_absoluteY="50dp"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="236dp"
+        android:layout_height="78dp"
+
+
+        android:gravity="left"
+        android:text="of House Targaryen, the First of His Name, King of the Andals and the First Men, Protector of the Seven Kingdoms"
+        android:textStyle="italic|bold"
+        app:layout_editor_absoluteX="50db"
+        app:layout_editor_absoluteY="50db"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <ImageView
+        android:id="@+id/snowImage"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+
+        android:contentDescription="Jon Snow"
+        android:src="@drawable/snow"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Bio"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/black"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="297dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <TextView
+        android:id="@+id/displayMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Welcome to your app!"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/black"
+
+
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+```java
+package com.example.personalizedapp;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        Button submit = findViewById(R.id.submitButton);
+        submit.setOnClickListener(new View.OnClickListener() {
+           @Override
+            public void onClick(View view) {
+               EditText editText = findViewById(R.id.editText);
+               String bio = editText.getText().toString();
+           }
+        });
+    }
+;}
