@@ -9,8 +9,11 @@ This repository contains a collection of Android Studio projects developed for t
 2. **Counter App**  
    - **Description:** Allows the user to count by incrementing and decrementing with a button press.
   
-2. **Unit Converter App**  
+3. **Unit Converter App**  
    - **Description:** Converts lbs to kg and L to gal
+  
+4. **Lucky Number App**
+   - **Description:** Generates a random "lucky" number
 
 # Add more projects as the course progresses
 
