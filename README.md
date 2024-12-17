@@ -14,6 +14,15 @@ This repository contains a collection of Android Studio projects developed for t
   
 4. **Lucky Number App**
    - **Description:** Generates a random "lucky" number
+  
+5. **Resource Management App**
+   - **Description:**
+
+6. **More Widgets App**
+   - **Description:**
+  
+7. **French Teacher App**
+   - **Description:** Translated basic English words/phrases into French via audio recordings.
 
 # Add more projects as the course progresses
 
