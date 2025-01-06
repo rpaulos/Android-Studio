@@ -2,6 +2,8 @@
 
 This repository contains a collection of Android Studio projects developed for the **Application Development** course. Each project demonstrates key concepts, techniques, and best practices in Android app development, showcasing the skills and knowledge gained throughout the course.  
 
+Note: The Applications from number 5 (Resource Management App) onwards are compressed into a ZIP file instead of having their own directories.
+
 ## 📂 Project List  
 1. **Greetings App**  
    - **Description:** A simple app that takes input from the user (name) and greets them. Allows the user to add a bio.
