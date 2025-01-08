@@ -25,6 +25,12 @@ Note: The Applications from number 5 (Resource Management App) onwards are compr
   
 7. **French Teacher App**
    - **Description:** Translated basic English words/phrases into French via audio recordings.
+  
+8. **Adapters in Android**
+   - **Description:** T
+
+9. **Jumbled Words App**
+   - **Description:** 
 
 # Add more projects as the course progresses
 
